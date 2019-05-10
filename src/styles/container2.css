@@ -1,0 +1,8 @@
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 10px;
+}

@@ -1,0 +1,23 @@
+.nav_bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar_link {
+    text-decoration: none;
+}
+
+.navbar_link:hover {
+    color: white;
+}
+
+.navbar_link:active {
+    color: black
+}
