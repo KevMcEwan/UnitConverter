@@ -1,11 +1,11 @@
 import React from 'react';
 import cupLogic from '../../helpers/cupLogic';
 
-const Result = (props) => {
+const CupsResult = (props) => {
 
     const currentIngredient = props.currentIngredient;
-    const currentMeasurement = props.currentMeasurement;
-    const result = cupLogic(currentIngredient, currentMeasurement);
+    const currentCupMeasurement = props.currentCupMeasurement;
+    const result = cupLogic(currentIngredient, currentCupMeasurement);
 
     return (
         <div>
@@ -17,4 +17,4 @@ const Result = (props) => {
     )
 }
 
-export default Result;
+export default CupsResult;

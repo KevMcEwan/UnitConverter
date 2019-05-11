@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Component1 from '../components/cooking/Component1';
-import Component3 from '../components/cooking/Component3';
-import Component4 from '../components/cooking/Component4';
+import CupWeights from '../components/weights/CupWeights';
+import OzAndGramsConverter from '../components/weights/OzAndGramsConverter';
 import '../styles/container1.css';
-
 
 class Container1 extends Component {
     constructor(props) {
@@ -19,41 +17,66 @@ class Container1 extends Component {
                "Butter",
                "Milk"
              ],
-             measurements: [
+             cupMeasurements: [
                  "1/8",
                  "1/4",
                  "1/3",
                  "1/2",
-                 "1"
+                 "3/4",
+                 "1",
+                 "2",
+                 "3",
+                "4"
+             ],
+             units :[
+                 "Ounces",
+                 "Grams",
              ],
              currentIngredient: "",
-             currentMeasurement: ""
+             currentCupMeasurement: "",
+             currentInputUnit: "",
+             currentInputNumber: ""
         };
         this.handleCurrentIngredientChange = this.handleCurrentIngredientChange.bind(this);
-        this.handleCurrentMeasurementChange = this.handleCurrentMeasurementChange.bind(this);
+        this.handleCurrentCupMeasurementChange = this.handleCurrentCupMeasurementChange.bind(this);
+        this.handleInputUnitChange = this.handleInputUnitChange.bind(this);
+        this.handleCurrentNumberChange = this.handleCurrentNumberChange.bind(this);
     };
 
     handleCurrentIngredientChange(ingredient){
         this.setState({currentIngredient: ingredient});
     }
 
-    handleCurrentMeasurementChange(measurement){
-        this.setState({currentMeasurement: measurement});
+    handleCurrentCupMeasurementChange(cupMeasurement){
+        this.setState({currentCupMeasurement: cupMeasurement});
+    }
+
+    handleInputUnitChange(inputUnit){
+        this.setState({currentInputUnit: inputUnit});
+    }
+
+    handleCurrentNumberChange(inputNumber) {
+        this.setState({currentInputNumber: inputNumber});
     }
 
     render() {
         return (
             <div className="container1">
-                <Component1 
+                <CupWeights
                 ingredients={this.state.ingredients}
-                measurements={this.state.measurements}
+                cupMeasurements={this.state.cupMeasurements}
                 currentIngredient={this.state.currentIngredient}
-                currentMeasurement={this.state.currentMeasurement}
+                currentCupMeasurement={this.state.currentCupMeasurement}
                 handleCurrentIngredientChange={this.handleCurrentIngredientChange}
-                handleCurrentMeasurementChange={this.handleCurrentMeasurementChange}
+                handleCurrentCupMeasurementChange={this.handleCurrentCupMeasurementChange}
                 />
-                <Component3 />
-                <Component4 />
+                <OzAndGramsConverter 
+                units={this.state.units}
+                currentInputUnit={this.state.currentInputUnit}
+                currentInputNumber={this.state.currentInputNumber}
+                handleInputUnitChange={this.handleInputUnitChange} 
+                handleCurrentNumberChange={this.handleCurrentNumberChange}
+                />
             </div>
         )
     }

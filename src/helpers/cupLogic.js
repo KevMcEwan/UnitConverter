@@ -12,21 +12,21 @@ const calculateGramsFromCups = function (ingredient, cupMeasurement) {
 
     let oneCupWeight = null;
 
-    if (ingredient == "Flour") {
+    if (ingredient === "Flour") {
         oneCupWeight = 125;
-    } else if (ingredient == "Rice (Uncooked)") {
+    } else if (ingredient === "Rice (Uncooked)") {
         oneCupWeight = 178.15;
-    } else if (ingredient == "Oats") {
+    } else if (ingredient === "Oats") {
         oneCupWeight = 102.2;
-    } else if (ingredient == "Sugar (Granulated)") {
+    } else if (ingredient === "Sugar (Granulated)") {
         oneCupWeight = 201;
-    } else if (ingredient == "Sugar (Caster)") {
+    } else if (ingredient === "Sugar (Caster)") {
         oneCupWeight = 189.5;
-    } else if (ingredient == "Sugar (Icing)") {
+    } else if (ingredient === "Sugar (Icing)") {
         oneCupWeight = 132.73;
-    } else if (ingredient == "Butter") {
+    } else if (ingredient === "Butter") {
         oneCupWeight = 227;
-    } else if (ingredient == "Milk") {
+    } else if (ingredient === "Milk") {
         oneCupWeight = 244.87;
     }
 
@@ -37,9 +37,9 @@ const calculateGramsFromCups = function (ingredient, cupMeasurement) {
     } else if (Number.isInteger(result) && ingredient !== "Milk") {
         return result + " g";
     } else if (Number.isInteger(result) === false && ingredient === "Milk") {
-        return result.toFixed(1) + " ml";
+        return result.toFixed(0) + " ml";
     } else {
-        return result.toFixed(1) + " g"
+        return result.toFixed(0) + " g"
     }
 };
 

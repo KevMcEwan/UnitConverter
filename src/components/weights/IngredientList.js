@@ -15,7 +15,7 @@ const IngredientList = (props) => {
     }
 
     return (
-        <div className="ingredient_list">
+        <div className="unit_list">
         <label>Ingredient:</label>
             <select defaultValue="default" onChange={handleChange} name="ingredient">
                 <option disabled value="default">Choose ingredient...</option>

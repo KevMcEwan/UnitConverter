@@ -1,16 +1,43 @@
 import React, { Component } from 'react';
-import Component5 from '../components/screen2/Component5';
-import Component6 from '../components/screen2/Component6';
+import DegCAndDegFConverter from '../components/temperature/degCAndDegFConverter';
 import '../styles/container2.css';
 
 
 class Container2 extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            units: [
+                "Celsius",
+                "Fahrenheit",
+            ],
+            currentInputUnit: "",
+            currentInputNumber: ""
+        };
+        this.handleInputUnitChange = this.handleInputUnitChange.bind(this);
+        this.handleCurrentNumberChange = this.handleCurrentNumberChange.bind(this);
+    };
+
+
+
+    handleInputUnitChange(inputUnit) {
+        this.setState({ currentInputUnit: inputUnit });
+    }
+
+    handleCurrentNumberChange(inputNumber) {
+        this.setState({ currentInputNumber: inputNumber });
+    }
 
     render() {
         return (
-            <div className="container2">
-                <Component5 />
-                <Component6 />
+            <div className="container1">
+                <DegCAndDegFConverter
+                    units={this.state.units}
+                    currentInputUnit={this.state.currentInputUnit}
+                    currentInputNumber={this.state.currentInputNumber}
+                    handleInputUnitChange={this.handleInputUnitChange}
+                    handleCurrentNumberChange={this.handleCurrentNumberChange}
+                />
             </div>
         )
     }

@@ -5,17 +5,7 @@
     justify-content: space-evenly;
     height: 100%;
     padding: 10px;
-}
-
-.component {
-    height: 275px;
-    width: 40%;
-    border-style: solid;
-    border-width: medium;
-    border-radius: 25px;
-    margin: 20px;
-    text-align: center;
-    align-content: center;
+    background-color: silver;
 }
 
 .component1 {
@@ -24,10 +14,10 @@
     justify-content: center;
     height: 100%;
     width: 40%;
-    border-style: solid;
-    border-width: medium;
     border-radius: 25px;
-    margin: 20px;
+    background-color: white;
+    box-shadow: 5px 10px grey;
+    margin: 2%;
     padding: 3%;
 }
 
@@ -35,12 +25,14 @@ select {
     width: 100%;
     padding: 10px;
     font-size: 15px;
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .measurement_list {
     width: 100%;
-    margin: 10% 0 10% 0;
+    height: 5%;
+    margin: 2% 0 5% 0;
 }
 
 .ingredient_list {
@@ -49,26 +41,49 @@ select {
     margin-top: 2%;
 }
 
-.result_div {
-    display: flex;
-    width: 100%;
-    height: 10%;
-    border-style: solid;
-    border-color: gray;
-    border-width: 1px;
-    border-radius: 10px;
-    margin-top: 2%;
-}
-
 .result_field {
-    /* text-align: center; */
-    padding-left: 40%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 1%;
+    background-color: lightgrey;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .component_header {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.input_field {
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.unit_input {
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    margin-top: 1%;
+    font-size: 15px;
+}
+
+.cups_list {
+    margin-top: 2%;
     margin-bottom: 3%;
 }

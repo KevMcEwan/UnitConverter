@@ -1,9 +1,9 @@
 import React from 'react';
 import IngredientList from './IngredientList';
 import NumberOfCupsList from './NumberOfCupsList';
-import Result from './Result';
+import CupsResult from './CupsResult';
 
-const Component1 = (props) => {
+const CupWeights = (props) => {
     return (
         <div className="component1">
         <div className="component_header">Cups to Grams Converter</div>
@@ -12,15 +12,15 @@ const Component1 = (props) => {
                 handleCurrentIngredientChange={props.handleCurrentIngredientChange}
             />
             <NumberOfCupsList
-                measurements={props.measurements}
-                handleCurrentMeasurementChange={props.handleCurrentMeasurementChange}
+                cupMeasurements={props.cupMeasurements}
+                handleCurrentCupMeasurementChange={props.handleCurrentCupMeasurementChange}
             />
-            <Result
+            <CupsResult
                 currentIngredient={props.currentIngredient}
-                currentMeasurement={props.currentMeasurement}
+                currentCupMeasurement={props.currentCupMeasurement}
             />
         </div>
     )
 }
 
-export default Component1;
+export default CupWeights;
