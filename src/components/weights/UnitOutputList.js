@@ -2,7 +2,9 @@ import React from 'react';
 
 const UnitOutputList = (props) => {
 
-    const options = props.units.map((unit) => {
+    const editedUnitsArray = props.units.filter((element) =>  element !== props.currentInputUnit);
+
+    const options = editedUnitsArray.map((unit) => {
         return <option key={unit} value={unit}>
             {unit}
         </option>

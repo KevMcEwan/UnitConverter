@@ -22,6 +22,7 @@ const MetricAndImperialConverter = (props) => {
             />
             <UnitOutputList 
                 units={props.units}
+                currentInputUnit={props.currentInputUnit}
                 handleOutputUnitChange={props.handleOutputUnitChange}
             />
             <UnitsResult
