@@ -7,7 +7,7 @@ import UnitOutputList from './UnitOutputList';
 const MetricAndImperialConverter = (props) => {
     return (
         <div className="component1">
-            <div className="component_header">Oz And Grams Converter</div>
+            <div className="component_header">Metric And Imperial Converter</div>
             <UnitInputList
                 units={props.units}
                 handleInputUnitChange={props.handleInputUnitChange}
