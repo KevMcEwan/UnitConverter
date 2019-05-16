@@ -1,19 +1,49 @@
 import React from 'react';
+import Grams from './grams';
+import Ounces from './ounces';
+import GramsAndKilos from './gramsAndKilos';
+import OuncesAndPounds from './ouncesAndPounds';
 
 const UnitInputField = (props) => {
 
-    function handleChange(event) {
-        event.preventDefault();
-        const currentInputNumber = event.target.value;
-        props.handleCurrentNumberChange(currentInputNumber)
-    }
+    let currentDiv = (
+        <div>
+            <label>Choose input units above</label>
+        </div>
+    );
+
+    if (props.currentInputUnit === "Grams") {
+        let currentDiv =
+            <Grams
+                handleCurrentGramChange={props.handleCurrentGramChange}
+            />;
+        return currentDiv;
+    } else if (props.currentInputUnit === "Ounces") {
+        let currentDiv =
+            <Ounces
+                handleCurrentOunceChange={props.handleCurrentOunceChange}
+            />;
+        return currentDiv;
+    } else if (props.currentInputUnit === "Grams and Kilograms") {
+        let currentDiv =
+            <GramsAndKilos
+                handleCurrentKiloChange={props.handleCurrentKiloChange}
+                handleCurrentGramChange={props.handleCurrentGramChange}
+            />;
+        return currentDiv;
+    } else if (props.currentInputUnit === "Ounces and Pounds") {
+        let currentDiv =
+            <OuncesAndPounds
+                handleCurrentOunceChange={props.handleCurrentOunceChange}
+                handleCurrentPoundChange={props.handleCurrentPoundChange}
+            />;
+        return currentDiv;
+    } ;
 
     return (
-        <div className="input_field">
-            <label>Value:</label>
-            <input type="number" className="unit_input" onChange={handleChange} />
-        </div>
+        currentDiv
     )
+
 }
 
 export default UnitInputField;

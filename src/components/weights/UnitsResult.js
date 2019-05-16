@@ -1,13 +1,18 @@
 import React from 'react';
-import ozAndGramsLogic from '../../helpers/ozAndGramsLogic';
+import weightConversionLogic from '../../helpers/weightConversionLogic';
 
 const UnitsResult = (props) => {
 
     const currentInputUnit = props.currentInputUnit;
-    const currentInputNumber = props.currentInputNumber;
+    const currentOutputUnit = props.currentOutputUnit;
+    const currentGramValue = props.currentGramValue;
+    const currentKiloValue = props.currentKiloValue;
+    const currentOunceValue = props.currentOunceValue;
+    const currentPoundValue = props.currentPoundValue;
 
-    const result = ozAndGramsLogic(currentInputUnit, currentInputNumber);
-
+    const result = weightConversionLogic(currentInputUnit, currentOutputUnit, currentGramValue, currentKiloValue, currentOunceValue, currentPoundValue);
+    
+    // debugger 
     return (
         <div>
             <label>Result</label>
