@@ -88,30 +88,38 @@ class Container1 extends Component {
 
     render() {
         return (
-            <div className="container1">
-                <CupWeights
-                    ingredients={this.state.ingredients}
-                    cupMeasurements={this.state.cupMeasurements}
-                    currentIngredient={this.state.currentIngredient}
-                    currentCupMeasurement={this.state.currentCupMeasurement}
-                    handleCurrentIngredientChange={this.handleCurrentIngredientChange}
-                    handleCurrentCupMeasurementChange={this.handleCurrentCupMeasurementChange}
-                />
-                <MetricAndImperialConverter
-                    units={this.state.units}
-                    currentInputUnit={this.state.currentInputUnit}
-                    currentOutputUnit={this.state.currentOutputUnit}
-                    currentKiloValue={this.state.currentKiloValue}
-                    currentGramValue={this.state.currentGramValue}
-                    currentPoundValue={this.state.currentPoundValue}
-                    currentOunceValue={this.state.currentOunceValue}
-                    handleCurrentKiloChange={this.handleCurrentKiloChange}
-                    handleCurrentGramChange={this.handleCurrentGramChange}
-                    handleCurrentOunceChange={this.handleCurrentOunceChange}
-                    handleCurrentPoundChange={this.handleCurrentPoundChange}
-                    handleInputUnitChange={this.handleInputUnitChange}
-                    handleOutputUnitChange={this.handleOutputUnitChange}
-                />
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="container1">
+                        <div className="col-m">
+                        <CupWeights
+                            ingredients={this.state.ingredients}
+                            cupMeasurements={this.state.cupMeasurements}
+                            currentIngredient={this.state.currentIngredient}
+                            currentCupMeasurement={this.state.currentCupMeasurement}
+                            handleCurrentIngredientChange={this.handleCurrentIngredientChange}
+                            handleCurrentCupMeasurementChange={this.handleCurrentCupMeasurementChange}
+                        />
+                        </div>
+                        <div className="col-m">
+                        <MetricAndImperialConverter
+                            units={this.state.units}
+                            currentInputUnit={this.state.currentInputUnit}
+                            currentOutputUnit={this.state.currentOutputUnit}
+                            currentKiloValue={this.state.currentKiloValue}
+                            currentGramValue={this.state.currentGramValue}
+                            currentPoundValue={this.state.currentPoundValue}
+                            currentOunceValue={this.state.currentOunceValue}
+                            handleCurrentKiloChange={this.handleCurrentKiloChange}
+                            handleCurrentGramChange={this.handleCurrentGramChange}
+                            handleCurrentOunceChange={this.handleCurrentOunceChange}
+                            handleCurrentPoundChange={this.handleCurrentPoundChange}
+                            handleInputUnitChange={this.handleInputUnitChange}
+                            handleOutputUnitChange={this.handleOutputUnitChange}
+                        />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
