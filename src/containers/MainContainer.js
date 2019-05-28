@@ -4,6 +4,8 @@ import Container1 from './Container1';
 import Container2 from './Container2';
 import HomePage from '../components/homepage/HomePage';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ACTIONS from "../modules/action";
+import { connect } from "react-redux";
 
 class MainContainer extends Component {
 

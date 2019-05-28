@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DegCAndDegFConverter from '../components/temperature/degCAndDegFConverter';
 import '../styles/container2.css';
-
+import ACTIONS from "../modules/action";
+import { connect } from "react-redux";
 
 class Container2 extends Component {
     constructor(props) {
@@ -17,8 +18,6 @@ class Container2 extends Component {
         this.handleInputUnitChange = this.handleInputUnitChange.bind(this);
         this.handleCurrentNumberChange = this.handleCurrentNumberChange.bind(this);
     };
-
-
 
     handleInputUnitChange(inputUnit) {
         this.setState({ currentInputUnit: inputUnit });
